@@ -21,7 +21,7 @@ public:
 		int fd = sock.GetFd();
 		struct epoll_event ev;
 		ev.data.fd = fd;
-		ev.events = EPOLLIN;
+		ev.events = EPOLLIN | EPOLLET;
 		int ret = epoll_ctl(_epfd, EPOLL_CTL_ADD, fd, &ev);
 		if(ret < 0)
 		{
