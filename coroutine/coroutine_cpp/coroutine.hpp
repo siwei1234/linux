@@ -3,7 +3,6 @@
 #include<map>
 #include<vector>
 
-#define CORSZ 1024
 #define STACKSZ (1024*64)
 
 
